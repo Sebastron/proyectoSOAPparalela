@@ -8,7 +8,7 @@ _Este proyecto consiste en levantar un servidor que sigue el protocolo SOAP,_
 _lo cual se debe ingresar el nombre, tipo mime y contenido en base64. Este_
 _programa es un OpenSource construido con lenguaje java, y para levantar_
 _el servidor se utiliza Apache Tomcat. Solo es compatible con Ubuntu y el_
-_tipo mime que se exige es **txt/csv**._
+_tipo mime que se exige es **text/csv**._
 
 _El programa consiste en la simulación de PSU para ingresos de carreras de la UTEM,_
 _lo cual permite generar en un archivo xlsx, que contiene un listado de alumnos que están_
@@ -16,7 +16,13 @@ _inscribiendo en las carreras. El programa debe ser capaz de seleccionar los alu
 _mejores puntajes para acceder en las carreras recomendadas. El contenido entrante debe estar_
 _encodeado en base64 y tener la estructura (rut;nem;ranking;matemática;lenguaje;ciencia;historia),_
 _donde el primero es el rut del postulante y el resto son puntajes obtenidos en la PSU como_
-_su nombre indica._
+_su nombre indica. Cabe señalar que, una vez decodificado el contenido, la estructura que se ocupa_
+_los datos en un listado de alumnos son las siguientes:_
+```
+rut;nem;ranking;lenguaje;matematica;ciencia;historia
+```
+_También es importante mencionar que cada fila representa un alumno, y que éstas están separados_
+_por salto de lineas (**\n**)._
 
 ### Requisitos 📋
 
@@ -33,18 +39,16 @@ _Para ejecutar el programa, se debe seguir los siguientes pasos manualmente:_
 _1) Posicionarse en la carpeta o directorio del Apache Tomcat._
    _Por defecto, puede ser la carpeta **apache-tomcat-8.0.27**_
    
-_2) Crear una carpeta o directorio dentro de la carpeta **webapps**._
-   _por defecto se nombra como **soapparalela**._
-   
-_3) Se descomprime el archivo soapparalela.war en la carpeta creada._
+_2) Copiar el archivo war **soapparalela.war**, que se encuentra en la carpeta **dist**_
+  _ del proyecto, y pegarlo dentro de la carpeta **webapps** en la carpeta apache_
 
-_4) Desde la carpeta de Apache Tomcat, se debe ingresar el siguiente_
+_3) En un terminal, desde la carpeta de Apache Tomcat, se debe ingresar el siguiente_
    _comando para activar el servidor:_
 ```
 bin/startup.sh
 ```
 
-_5) Por último, se debe abrir un navegador e ingresar el siguiente link,_
+_4) Por último, se debe abrir un navegador e ingresar el siguiente link,_
    _con el fin de verificar su funcionamiento:_ 
    
    **http://localhost:8080/soapparalela/carreras**
