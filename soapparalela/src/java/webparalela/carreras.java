@@ -23,7 +23,7 @@ public class carreras {
     public String archivo(@WebParam(name = "nombre") String nombre, @WebParam(name = "mime") String mime, @WebParam(name = "dato") String datos )  {
         String MIME = mime.toUpperCase(); //coloca el mime ingresado en mayusculas
         if(!"".equals(datos) && !"".equals(mime) && !"".equals(nombre)){//verifica que  se ingresen todos los datos
-            if( "CSV/TEXT".equals(MIME) || "CSV".equals(MIME) || "TEXT".equals(MIME) || "TEXT/CSV".equals(MIME)){ //verifica si es el tipo mime correccto
+            if( "TXT/CSV".equals(MIME) || "CSV/TEXT".equals(MIME) || "CSV".equals(MIME) || "TEXT".equals(MIME) || "TEXT/CSV".equals(MIME) || "CSV/TXT".equals(MIME)  || "TXT".equals(MIME)){ //verifica si es el tipo mime correccto
                 try {
                     return "NOMBRE: "+ a.nombre() + "\n "  +"MIME: "+ a.mime() +" \n"+ "Base64: "+ a.leer(datos); 
                 } catch (IOException ex) {

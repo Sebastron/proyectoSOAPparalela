@@ -462,7 +462,7 @@ public class escribir {
                     break;
             }
         }
-        FileOutputStream fileout = new FileOutputStream("excelsoap10mil.xlsx"); //se le da el nombre al archivo generado
+        FileOutputStream fileout = new FileOutputStream("Postulacion UTEM 2020.xlsx"); //se le da el nombre al archivo generado
         book.write(fileout);
         fileout.close();
         book.close();

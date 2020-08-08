@@ -14,7 +14,7 @@ public class Main{
     }
     
     public String nombre(){
-        return "excelpruebasoapjavier \n";
+        return "Postulacion UTEM 2020 \n";
     }
     public String mime(){
         return "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet. \n";
@@ -26,7 +26,7 @@ public class Main{
         String cadenadescadificada = new String(bytesdecodificado); // se descodifica la base64 ingresada
         b.datoscarreras();
         b.leerdatos(cadenadescadificada);
-        File archivo= new File("excelsoap10mil.xlsx");
+        File archivo= new File("Postulacion UTEM 2020.xlsx");
         byte[] archivod =new byte[(int)archivo.length()];
         InputStream inputStream =new FileInputStream(archivo);
         inputStream.read(archivod);
