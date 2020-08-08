@@ -21,7 +21,7 @@ _los datos en un listado de alumnos son las siguientes:_
 ```
 rut;nem;ranking;lenguaje;matematica;ciencia;historia
 ```
-_También es importante mencionar que cada fila representa un alumno, y que éstas están separados_
+_También es importante mencionar que cada fila representa un alumno, y que estas están separados_
 _por salto de lineas (**\n**)._
 
 ### Requisitos 📋
