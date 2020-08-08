@@ -40,7 +40,7 @@ _1) Posicionarse en la carpeta o directorio del Apache Tomcat._
    _Por defecto, puede ser la carpeta **apache-tomcat-8.0.27**_
    
 _2) Copiar el archivo war **soapparalela.war**, que se encuentra en la carpeta **dist**_
-  _ del proyecto, y pegarlo dentro de la carpeta **webapps** en la carpeta apache_
+  _del proyecto, y pegarlo dentro de la carpeta **webapps** en la carpeta apache_
 
 _3) En un terminal, desde la carpeta de Apache Tomcat, se debe ingresar el siguiente_
    _comando para activar el servidor:_
